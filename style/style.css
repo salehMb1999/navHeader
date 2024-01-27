@@ -35,6 +35,8 @@ img {
   -o-border-radius: 1.2rem;
   box-shadow: 0 0.2rem 0.8rem 0 rgba(99, 99, 99, 0.2);
   padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
 }
 .leftNav {
   display: flex;
@@ -47,4 +49,17 @@ img {
 }
 .logoImgWrapper {
   min-width: 5rem;
+}
+.centerNav {
+  width: 50%;
+}
+.centerMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  list-style: none;
+}
+.menuLink {
+  text-decoration: none;
 }
