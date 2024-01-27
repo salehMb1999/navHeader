@@ -1,0 +1,34 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  background-color: #f7f8fd;
+}
+
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+}
+.sectionNav {
+  width: 100%;
+  background-color: #fff;
+  height: 10rem;
+  margin-top: 1.6rem;
+  border-radius: 1.2rem;
+  -webkit-border-radius: 1.2rem;
+  -moz-border-radius: 1.2rem;
+  -ms-border-radius: 1.2rem;
+  -o-border-radius: 1.2rem;
+  box-shadow: 0 .2rem .8rem 0 rgba(99, 99, 99, .2);
+}
