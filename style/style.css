@@ -125,6 +125,7 @@ img {
 }
 
 .mainLine {
+  position: relative;
   width: 2rem;
   display: flex;
   height: 0.2rem;
@@ -134,7 +135,6 @@ img {
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
-  position: relative;
   transition: 0.3s all ease-in-out;
   -webkit-transition: 0.3s all ease-in-out;
   -moz-transition: 0.3s all ease-in-out;
@@ -252,6 +252,9 @@ img {
     gap: 2rem;
   }
   .navSection {
-    grid-template-columns: 5% 80% 3%;
+    grid-template-columns: 5% 80% 6%;
+  }
+  .mainLine {
+    width: 20px;
   }
 }
