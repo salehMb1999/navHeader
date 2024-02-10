@@ -23,10 +23,21 @@ img {
   max-width: 130rem;
   margin: 0 auto;
 }
+.active {
+  background: linear-gradient(70deg, #3ac2ff 40%, #2f56ff);
+  color: #fff;
+  padding: 1.2rem;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  font-weight: bold;
+}
 .navSection {
   width: 100%;
   background-color: #fff;
-  height: 10rem;
+  /* height: 10rem; */
   margin-top: 1.6rem;
   border-radius: 1.2rem;
   -webkit-border-radius: 1.2rem;
@@ -35,7 +46,8 @@ img {
   -o-border-radius: 1.2rem;
   box-shadow: 0 0.2rem 0.8rem 0 rgba(99, 99, 99, 0.2);
   padding: 1rem 2rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 10% 45% 25%;
   justify-content: space-between;
 }
 .leftNav {
@@ -50,9 +62,9 @@ img {
 .logoImgWrapper {
   min-width: 5rem;
 }
-.centerNav {
+/* .centerNav {
   width: 50%;
-}
+} */
 .centerMenu {
   display: flex;
   justify-content: space-between;
@@ -65,9 +77,10 @@ img {
 }
 .rightNav {
   display: flex;
+  justify-content: end;
   align-items: center;
-  width: 20%;
-  gap: 4rem;
+  /* width: 20%; */
+  gap: 1.5rem;
 }
 .groupIcon {
   display: flex;
@@ -89,4 +102,156 @@ img {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+}
+.statusConnection {
+  width: 6.5rem;
+  background-color: #edfdfa;
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+  -webkit-border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
+  -ms-border-radius: 0.8rem;
+  -o-border-radius: 0.8rem;
+  text-align: center;
+  color: #1f927f;
+}
+.mobileNavMenu {
+  display: none;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.mainLine {
+  width: 2rem;
+  display: flex;
+  height: 0.2rem;
+  border-radius: 1rem;
+  background-color: #000;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  position: relative;
+  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.3s all ease-in-out;
+  -moz-transition: 0.3s all ease-in-out;
+  -ms-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
+}
+.mainLine::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 0.2rem;
+  background-color: #000;
+  top: 0.5rem;
+  margin: 0 auto;
+  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.3s all ease-in-out;
+  -moz-transition: 0.3s all ease-in-out;
+  -ms-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
+}
+.mainLine::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 0.2rem;
+  background-color: #000;
+  top: -0.5rem;
+  margin: 0 auto;
+  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.3s all ease-in-out;
+  -moz-transition: 0.3s all ease-in-out;
+  -ms-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
+}
+
+.lineActive::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 0.2rem;
+  background-color: #000;
+  top: 0rem;
+  rotate: 45deg;
+}
+.lineActive::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 0.2rem;
+  background-color: #000;
+  top: 0rem;
+  rotate: -45deg;
+}
+.mobileNav {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 999px) {
+  .logoImgWrapper {
+    min-width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logoSection h3 {
+    font-size: 1.5rem;
+  }
+  .menuLink {
+    font-size: 1.4rem;
+  }
+  .groupIcon {
+    gap: 2rem;
+  }
+  .active {
+    padding: 0.6rem;
+  }
+  .groupIcon a i {
+    font-size: 1.4rem;
+  }
+  .statusConnection {
+    width: 5.5rem;
+    padding: 0.2rem;
+  }
+  .profileUser {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .navSection {
+    grid-template-columns: 5% 45% 20%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .centerNav {
+    display: none;
+  }
+  .mobileNav {
+    display: flex;
+  }
+  .mobileNavMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0 0 0;
+    list-style: none;
+    /* justify-content: space-evenly; */
+    position: fixed;
+    left: -20rem;
+    background-color: #fff;
+    top: 0;
+    bottom: 0;
+    width: 15rem;
+    gap: 2rem;
+  }
+  .navSection {
+    grid-template-columns: 5% 80% 3%;
+  }
 }
